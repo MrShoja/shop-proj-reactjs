@@ -10,7 +10,7 @@ import ProductDetails from './Components/ProductDetails';
 import ProductContextProvider from './context/ProductContextProvider';
 import CartContextProvider from './context/CartContextProvider';
 import Navbar from './shared/Navbar';
-import Cart from "./shared/Cart"
+import shopCart from './shared/shopCart';
 
 function App() {
   return (
@@ -19,8 +19,8 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/products/:id" component={ProductDetails} />
-          <Route path="/Cart" component={Cart} />
           <Route path="/products" component={Store} />
+          <Route path="/cart" component={shopCart} />
           <Redirect to="/products" />
         </Switch>
       </CartContextProvider>

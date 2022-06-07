@@ -11,15 +11,15 @@ const isInCart = (state ,id) => {
 }
 
 
-const quanityCount = (state ,id) => {
+const quantityCount = (state ,id) => {
     const index = state.selectedItems.findIndex(item => item.id === id)
     if (index === -1) {
         return false
     } else {
-        return state.selectedItems[index].quanity
+        return state.selectedItems[index].quantity
     }
 }
 
 
 
-export {shortan ,isInCart ,quanityCount}
+export {shortan ,isInCart ,quantityCount}
