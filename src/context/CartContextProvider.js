@@ -29,7 +29,6 @@ const cartReducer = (state, action) => {
                 })
             }
 
-
             return {
                 ...state,
                 selectedItems: [...state.selectedItems],

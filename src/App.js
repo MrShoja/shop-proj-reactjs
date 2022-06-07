@@ -15,6 +15,7 @@ import shopCart from './shared/shopCart';
 function App() {
   return (
     <ProductContextProvider>
+      
       <CartContextProvider>
         <Navbar />
         <Switch>

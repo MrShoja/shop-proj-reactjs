@@ -10,7 +10,6 @@ import shop from "./shop.png"
 const Navbar = () => {
 
     const { state } = useContext( CartContext )
-
     return (
         <div>
             <div>

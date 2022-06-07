@@ -11,6 +11,7 @@ const isInCart = (state ,id) => {
 }
 
 
+
 const quantityCount = (state ,id) => {
     const index = state.selectedItems.findIndex(item => item.id === id)
     if (index === -1) {

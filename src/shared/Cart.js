@@ -28,7 +28,6 @@ const Cart = (props, state) => {
                     <button onClick={() => dispatch({type: "REMOVE_ITEM", payload: props.data})}><img src={trash} style={{width: "20px"}} /></button>
                 }
                     <button onClick={() => dispatch({type: "INCREASE", payload: props.data})}>+</button>
-
             </div>
         </div>
     )
