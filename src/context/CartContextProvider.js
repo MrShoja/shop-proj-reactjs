@@ -28,6 +28,7 @@ const cartReducer = (state, action) => {
                     quantity: 1
                 })
             }
+            
 
             return {
                 ...state,

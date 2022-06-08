@@ -23,6 +23,7 @@ const Product = ({ productDate }) => {
             <div>
                 <Link to={`/products/${productDate.id}`}>Details</Link>
             </div>
+            
             <div>
                 {
                     isInCart(state, productDate.id) ?

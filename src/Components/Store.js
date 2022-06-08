@@ -15,9 +15,11 @@ const Store = () => {
                         <Product 
                      key={product.id}
                      productDate={product}
+             
                      
                 />)
             }
+            
         </div>
     )
 }
