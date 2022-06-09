@@ -10,29 +10,29 @@ import { CartContext } from '../context/CartContextProvider'
 // Img
 import logo from "./trash.png"
 
-const Product = ({ productDate }) => {
+const Product = ({ productData }) => {
     const { state, dispatch } = useContext(CartContext)
 
 
     return (
         <div>
-            <img src={productDate.image} style={{ width: "200px" }} />
-            <h3>{shortan(productDate.title)}</h3>
-            <i>{productDate.price} $</i>
+            <img src={productData.image} style={{ width: "200px" }} />
+            <h3>{shortan(productData.title)}</h3>
+            <i>{productData.price} $</i>
             <br />
             <div>
-                <Link to={`/products/${productDate.id}`}>Details</Link>
+                <Link to={`/products/${productData.id}`}>Details</Link>
             </div>
             
             <div>
-                {
-                    isInCart(state, productDate.id) ?
-                        <button onClick={() => dispatch({ type: "INCREASE", payload: productDate })}>+</button> :
-                        <button onClick={() => dispatch({ type: "ADD_ITEM", payload: productDate })}>Add to Cart</button>
+                
+                {quantityCount(state, productData.id) > 1 && <button onClick={() => dispatch({ type: "DECREAS", payload: productData })}>-</button>}
+               {quantityCount(state, productData.id) === 1 && <button onClick={() => dispatch({ type: "REMOVE_ITEM", payload: productData })}><img src={logo} style={{width: "20px"}}/></button>}
+               {
+                    isInCart(state, productData.id) ?
+                        <button onClick={() => dispatch({ type: "INCREASE", payload: productData })}>+</button> :
+                        <button onClick={() => dispatch({ type: "ADD_ITEM", payload: productData })}>Add to Cart</button>
                 }
-                {quantityCount(state, productDate.id) > 1 && <button onClick={() => dispatch({ type: "DECREAS", payload: productDate })}>-</button>}
-               {quantityCount(state, productDate.id) === 1 && <button onClick={() => dispatch({ type: "REMOVE_ITEM", payload: productDate })}><img src={logo} style={{width: "20px"}}/></button>}
-
             </div>
         </div>
     )

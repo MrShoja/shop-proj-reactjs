@@ -14,7 +14,7 @@ const Store = () => {
                              products.map(product =>
                         <Product 
                      key={product.id}
-                     productDate={product}
+                     productData={product}
              
                      
                 />)

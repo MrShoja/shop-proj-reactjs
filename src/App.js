@@ -8,14 +8,13 @@ import ProductDetails from './Components/ProductDetails';
 
 //Context ⍗
 import ProductContextProvider from './context/ProductContextProvider';
-import CartContextProvider from './context/CartContextProvider';
+import CartContextProvider, { CartContext } from './context/CartContextProvider';
 import Navbar from './shared/Navbar';
 import shopCart from './shared/shopCart';
 
 function App() {
   return (
     <ProductContextProvider>
-      
       <CartContextProvider>
         <Navbar />
         <Switch>
