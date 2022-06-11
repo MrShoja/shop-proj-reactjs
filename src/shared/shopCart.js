@@ -29,7 +29,13 @@ const shopCart = () => {
             {
                 state.checkout && <div>
                     <h3>Cheked Out Successfuly</h3>
-                    <Link to="/products" >By More</Link>
+                    <Link to="/products">By More</Link>
+                </div>
+            }
+            {
+            !state.checkout && state.itemsCounter === 0 && <div>
+                    <h3>Cheked Out Successfuly</h3>
+                    <Link to="/products">By More</Link>
                 </div>
             }
         </div>
