@@ -11,7 +11,7 @@ const ProductContextProvider = ({children}) => {
 
     useEffect(() => {     
         const fetchAPI = async () => {   
-            setProducts(await getProducts())    
+            setProducts(await getProducts())        
         }
 
         
