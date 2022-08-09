@@ -7,7 +7,7 @@ import { getProducts } from '../services/api'
 
 export const ProductContext = createContext()
 const ProductContextProvider = ({children}) => {
-    const [Products ,setProducts] = useState([])
+    const [Products ,setProducts] = useState([]) 
 
     useEffect(() => {     
         const fetchAPI = async () => {   
