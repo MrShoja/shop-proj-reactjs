@@ -7,3 +7,4 @@ export const getProducts = async () => {
     return response.data
 }
 
+

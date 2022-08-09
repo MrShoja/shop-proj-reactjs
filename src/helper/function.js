@@ -24,3 +24,5 @@ const quantityCount = (state ,id) => {
 
 
 export {shortan ,isInCart ,quantityCount}
+
+

@@ -39,3 +39,4 @@ const Product = ({ productData }) => {
 }
 
 export default Product
+

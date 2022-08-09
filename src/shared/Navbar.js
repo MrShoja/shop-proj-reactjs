@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { CartContext } from '../context/CartContextProvider'
 
 // Icons
+
 import shop from "./shop.png"
 
 const Navbar = () => {
