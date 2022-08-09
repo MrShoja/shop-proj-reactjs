@@ -9,7 +9,7 @@ export const ProductContext = createContext()
 const ProductContextProvider = ({children}) => {
     const [Products ,setProducts] = useState([])
 
-    useEffect(() => {
+    useEffect(() => { 
         const fetchAPI = async () => {
             setProducts(await getProducts())
         }
